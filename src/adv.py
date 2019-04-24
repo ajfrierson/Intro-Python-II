@@ -44,6 +44,7 @@ a = Player("Alvin", "outside", [])
 # Write a loop that:
 #
 # * Prints the current room name
+print(f"{a.name}'s location is {a.room}")
 # * Prints the current description (the textwrap module might be useful here).
 # * Waits for user input and decides what to do.
 #
