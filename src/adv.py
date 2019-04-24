@@ -43,13 +43,13 @@ room['treasure'].s_to = room['narrow']
 a = Player("Alvin", "outside", [])
 
 #Inventory Check:
-def get_item():
-items = sorted(room[a.room].items)
-print(a.inventory)
-for i in items:
-    print(a.name)
-    a.inventory.append(i.name)
+def getItem():
+    items = sorted(room[a.room].items)
     print(a.inventory)
+    for i in items:
+        print(i.name)
+        a.inventory.append(i.name)
+        print(a.inventory)
 # Write a loop that:
 #
 # * Prints the current room name
@@ -58,11 +58,21 @@ print(f"{a.name}'s location is {a.room}")
 items = sorted(room[a.room].items)
 # * Prints the current description (the textwrap module might be useful here).
 for i in room:
-    if i == a.room
-    print(room[i].prompt)
+    if i == a.room:
+        print(room[i].prompt)
 # * Waits for user input and decides what to do.
-#
+#Passing in direction
+def game():
+    while True:
+        dir = input(">> Enter 'n', 's', 'e' or 'w' to move', 'i' to see inventor, 'get/drop item' or 'q' to quit.")
+
+        # count arguments and start at items to use arguments as items.
+        args = dir.split()[1:]
+        numargs = len(args) + 1
+
 # If the user enters a cardinal direction, attempt to move to the room there.
+
+
 # Print an error message if the movement isn't allowed.
 #
 # If the user enters "q", quit the game.
