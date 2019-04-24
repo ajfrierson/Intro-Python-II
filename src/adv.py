@@ -41,11 +41,25 @@ room['treasure'].s_to = room['narrow']
 
 # Make a new player object that is currently in the 'outside' room.
 a = Player("Alvin", "outside", [])
+
+#Inventory Check:
+def get_item():
+items = sorted(room[a.room].items)
+print(a.inventory)
+for i in items:
+    print(a.name)
+    a.inventory.append(i.name)
+    print(a.inventory)
 # Write a loop that:
 #
 # * Prints the current room name
 print(f"{a.name}'s location is {a.room}")
+
+items = sorted(room[a.room].items)
 # * Prints the current description (the textwrap module might be useful here).
+for i in room:
+    if i == a.room
+    print(room[i].prompt)
 # * Waits for user input and decides what to do.
 #
 # If the user enters a cardinal direction, attempt to move to the room there.
